@@ -24,17 +24,14 @@ https://www.fontsquirrel.com/
   box-sizing: border-box;
 }
 body {
-  /* height: 100vh; */
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-  /* height: 100%; */
   width: 100%;
   display: flex;
   min-width: 800px;
 }
 .sidebar {
-  /* height: 100%; */
   width: 30%;
   min-width: 350px;
   background-image: url("images/halie-west-25xggax4bSA-unsplash.jpg");
