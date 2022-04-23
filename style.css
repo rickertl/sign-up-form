@@ -1,0 +1,169 @@
+:root {
+  --bkg-color: #f9fafb;
+  --green: #596d48;
+  --red: #d55c5f;
+  --blue: #0033cc;
+  --light-grey: #e5e7eb;
+  --medium-grey: #a9a9a9;
+  --row-heights: 240px auto 1fr;
+}
+/*
+Converted supplied otf to woff format for better browser compatibility.
+https://www.fontsquirrel.com/
+*/
+@font-face {
+  font-family: "NorseBold";
+  src: url("fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* height: 100vh; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  /* height: 100%; */
+  width: 100%;
+  display: flex;
+  min-width: 800px;
+}
+.sidebar {
+  /* height: 100%; */
+  width: 30%;
+  min-width: 350px;
+  background-image: url("images/halie-west-25xggax4bSA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: var(--row-heights);
+}
+.logo-container,
+.credits-container,
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.logo {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+.logo img {
+  height: 100%;
+}
+.logo-text {
+  font-family: NorseBold;
+  color: white;
+  font-size: 3.75rem;
+}
+.credits {
+  color: white;
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 8.75px;
+}
+.credits a {
+  color: white;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: var(--row-heights);
+  background-color: var(--bkg-color);
+}
+.description {
+  font-weight: 500;
+  margin: 0 0 35px 30px;
+}
+.description p {
+  width: 450px;
+  margin-top: 20px;
+}
+.description p:last-of-type {
+  margin-bottom: 0;
+}
+.form-container {
+  background-color: white;
+  box-shadow: 2px 3px 8px -3px var(--medium-grey);
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.form-container p {
+  padding: 12px 0 15px;
+}
+form {
+  display: flex;
+  width: 400px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px 45px;
+}
+form label {
+  display: block;
+  font-size: 0.5rem;
+  letter-spacing: 0.5px;
+}
+form input {
+  width: 170px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid var(--light-grey);
+  border-radius: 3px;
+  padding: 3px 7px;
+  outline: none;
+  font-size: 0.7rem;
+  position: relative;
+}
+input:focus {
+  border: 1px solid var(--blue);
+  box-shadow: 2px 4px 4px -3px var(--medium-grey);
+}
+input:invalid {
+  border: 1px solid var(--red);
+}
+.error {
+  font-size: 0.5rem;
+  color: var(--red);
+}
+.submit-container {
+  padding: 25px 0 30px 30px;
+}
+.submit-container p {
+  margin-top: 22px;
+  font-size: 0.7rem;
+}
+.submit-container a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+.submit-container a:hover {
+  text-decoration: underline;
+}
+.btn {
+  border: 1px solid var(--green);
+  background-color: var(--green);
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 2px 3px 8px -3px var(--medium-grey);
+}
+.btn:hover {
+  color: var(--green);
+  background-color: white;
+}
