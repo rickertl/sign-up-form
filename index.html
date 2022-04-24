@@ -16,7 +16,6 @@
             <div class="logo-text">Odin</div>
           </div>
         </div>
-        <div class="filler"></div>
         <div class="credits-container">
           <div class="credits">
             Photo by
@@ -79,16 +78,5 @@
         </div>
       </div>
     </div>
-    <script>
-      // Added to ensure sidebar fills height upon opening Google Console
-      const matchHeights = () => {
-        document.querySelector(".filler").style.height =
-          document.querySelector(".form-container").offsetHeight + "px";
-        document.querySelector(".credits-container").style.height =
-          document.querySelector(".submit-container").offsetHeight + "px";
-      };
-      window.addEventListener("resize", matchHeights);
-      matchHeights();
-    </script>
   </body>
 </html>

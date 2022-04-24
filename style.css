@@ -5,7 +5,7 @@
   --blue: #0033cc;
   --light-grey: #e5e7eb;
   --medium-grey: #a9a9a9;
-  --row-heights: 240px auto 1fr;
+  --first-row-height: 240px;
 }
 /*
 Converted supplied otf to woff format for better browser compatibility.
@@ -23,23 +23,23 @@ https://www.fontsquirrel.com/
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
+  min-height: 100vh;
   width: 100%;
   display: flex;
-  min-width: 800px;
 }
 .sidebar {
-  width: 30%;
-  min-width: 350px;
+  flex: 1 0 350px;
   background-image: url("images/halie-west-25xggax4bSA-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-rows: var(--row-heights);
+  grid-template-rows: var(--first-row-height) 1fr;
 }
 .logo-container,
 .credits-container,
@@ -74,10 +74,9 @@ body {
   color: white;
 }
 .main {
-  height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-rows: var(--row-heights);
+  grid-template-rows: var(--first-row-height) auto 1fr;
   background-color: var(--bkg-color);
 }
 .description {
