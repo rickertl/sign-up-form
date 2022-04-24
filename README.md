@@ -1,6 +1,6 @@
 # SIGN-UP FORM
 
-Based on a supplied comp, built sign-up form for use in future app.
+Based on a supplied comp, built a sign-up form for future use.
 
 ## Notes
 
